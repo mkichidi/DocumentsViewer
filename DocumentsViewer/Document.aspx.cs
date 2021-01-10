@@ -63,7 +63,7 @@ namespace DocumentsViewer
             if (Convert.ToInt32( ASPxComboBox1.Value) > 0)
             {
                 SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["FleetConnectionString"].ToString());
-                SqlCommand cmd = new SqlCommand("GetVehicleDocuments", con);
+                SqlCommand cmd = new SqlCommand("GetVehicleDocumentsForWeb", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@PropertyID", Convert.ToInt32(ASPxComboBox1.Value));
                var a= ASPxComboBox1.Value;
