@@ -23,7 +23,7 @@ namespace DocumentsViewer
             if (dt == null)
             {
                 SqlConnection con = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["FleetConnectionString"].ToString());
-                SqlCommand cmd = new SqlCommand("GetOwnVehicle", con);
+                SqlCommand cmd = new SqlCommand("GetOwnVehicleWeb", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 con.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -128,8 +128,15 @@ namespace DocumentsViewer
                     }
                 }
 
-                Session["Path"] = "Files\\" + System.IO.Path.GetFileName(pathLiteral.Text);
-                ScriptManager.RegisterStartupScript(Page, typeof(Page), "OpenWindow", "window.open('Pdf.aspx');", true);
+                frame.Src = "Files\\" + System.IO.Path.GetFileName(pathLiteral.Text);
+                //Session["Path"] = "Files\\" + System.IO.Path.GetFileName(pathLiteral.Text);
+                //ScriptManager.RegisterStartupScript(Page, typeof(Page), "OpenWindow", "window.open('Pdf.aspx');", true);
+
+                //System.IO.File.Copy(pathLiteral.Text, Server.MapPath("Files\\" + System.IO.Path.GetFileName(pathLiteral.Text)), true);
+                //Response.ContentType = "application/octet-stream";
+                //Response.AppendHeader("Content-Disposition", "attachment; filename=" + pathLiteral.Text);
+                //Response.TransmitFile("Files\\" + System.IO.Path.GetFileName(pathLiteral.Text));
+                //Response.End();
             }
         }
     }

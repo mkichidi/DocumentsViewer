@@ -122,7 +122,7 @@
     <Content Include="js\move-top.js" />
     <Content Include="js\nivo-lightbox.min.js" />
     <Content Include="js\responsiveslides.min.js" />
-    <Content Include="Menu.aspx" />
+    <Content Include="default.aspx" />
     <Content Include="Pdf.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -143,12 +143,12 @@
     <Compile Include="DriverDocuments.aspx.designer.cs">
       <DependentUpon>DriverDocuments.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pdf.aspx.cs">
       <DependentUpon>Pdf.aspx</DependentUpon>

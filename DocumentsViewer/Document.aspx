@@ -78,6 +78,8 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField HeaderStyle-Font-Size="XX-Large" DataField="DocumentName" HeaderText="DocumentName" ControlStyle-Font-Size="Larger"/>
+                        <asp:BoundField HeaderStyle-Font-Size="XX-Large" DataField="VehicleDocumentType" HeaderText="VehicleDocumentType" ControlStyle-Font-Size="Larger"/>
+                        <asp:BoundField HeaderStyle-Font-Size="XX-Large" DataField="Year" HeaderText="Year" ControlStyle-Font-Size="Larger"/>
 
                         <asp:TemplateField HeaderText="Document Path" Visible="false">
                             <ItemTemplate>
@@ -96,6 +98,8 @@
             </div>
         </div>
         <dx:ASPxLoadingPanel ID="LoadingPanel" runat="server" ClientInstanceName="LoadingPanel" Modal="True"></dx:ASPxLoadingPanel>
+
+        <iframe style="width:100%;height:calc(100vh - 100px)" runat="server" id="frame"></iframe>
         <%--<dx:ASPxLoadingPanel ID="LoadingPanel" runat="server" ClientInstanceName="LoadingPanel" Modal="True">
     </dx:ASPxLoadingPanel>--%>
         <%--</ContentTemplate>
